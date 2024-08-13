@@ -1,0 +1,35 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.searchField:focus{
+  outline: none;
+  border:none
+}
+.result{
+  overflow-y:scroll;
+}
+.result::-webkit-scrollbar{
+  display:none;
+}
+.loader hr{
+  border-radius :4px;
+  background-color: #f6f7f8;
+  border:none;
+  background: linear-gradient(to right, #9ed7ff, #ffffff, #9ed7ff);
+  background-size: 900px 50px;
+  height: 20px;
+  animation : loader 3s infinite linear;
+  width:80vh;
+  margin : 0 30px;
+}
+
+@keyframes loader{
+  0%{
+    background-position:-800px 0px;
+  }
+  100%{
+    background-position : 800px 0px;
+  }
+}
